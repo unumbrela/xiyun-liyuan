@@ -1,0 +1,1152 @@
+{
+  "K": 10,
+  "topics": [
+    {
+      "id": 0,
+      "label": "进京·镇守·父子",
+      "top_words": [
+        {
+          "word": "进京",
+          "weight": 21.49
+        },
+        {
+          "word": "镇守",
+          "weight": 18.01
+        },
+        {
+          "word": "父子",
+          "weight": 16.69
+        },
+        {
+          "word": "诈降",
+          "weight": 15.71
+        },
+        {
+          "word": "设计",
+          "weight": 14.66
+        },
+        {
+          "word": "识破",
+          "weight": 14.28
+        },
+        {
+          "word": "大败",
+          "weight": 14.13
+        },
+        {
+          "word": "自刎",
+          "weight": 13.94
+        },
+        {
+          "word": "部将",
+          "weight": 13.12
+        },
+        {
+          "word": "带领",
+          "weight": 12.3
+        },
+        {
+          "word": "修书",
+          "weight": 12.1
+        },
+        {
+          "word": "放粮",
+          "weight": 12.01
+        },
+        {
+          "word": "抵御",
+          "weight": 11.88
+        },
+        {
+          "word": "以图",
+          "weight": 11.0
+        },
+        {
+          "word": "献计",
+          "weight": 10.79
+        }
+      ],
+      "share": 0.1095,
+      "coherence": -2.6438,
+      "x": 0.1321,
+      "y": -0.3611,
+      "representative": [
+        {
+          "play_id": "01035001",
+          "title": "狸猫换太子【三本】",
+          "drama_type": "公案戏"
+        },
+        {
+          "play_id": "01015006",
+          "title": "英杰烈",
+          "drama_type": "历史戏"
+        },
+        {
+          "play_id": "03106005",
+          "title": "窃兵符",
+          "drama_type": "其他"
+        },
+        {
+          "play_id": "94000006",
+          "title": "春草闯堂",
+          "drama_type": "公案戏"
+        },
+        {
+          "play_id": "01013001",
+          "title": "司马逼宫",
+          "drama_type": "历史戏"
+        },
+        {
+          "play_id": "02004052",
+          "title": "定中原",
+          "drama_type": "历史戏"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "label": "自刎·报仇·匈奴",
+      "top_words": [
+        {
+          "word": "自刎",
+          "weight": 28.87
+        },
+        {
+          "word": "报仇",
+          "weight": 20.49
+        },
+        {
+          "word": "匈奴",
+          "weight": 20.1
+        },
+        {
+          "word": "人马",
+          "weight": 19.53
+        },
+        {
+          "word": "大败",
+          "weight": 17.6
+        },
+        {
+          "word": "生擒",
+          "weight": 15.04
+        },
+        {
+          "word": "父子",
+          "weight": 13.25
+        },
+        {
+          "word": "为名",
+          "weight": 12.21
+        },
+        {
+          "word": "全家",
+          "weight": 11.89
+        },
+        {
+          "word": "逃走",
+          "weight": 11.54
+        },
+        {
+          "word": "追赶",
+          "weight": 11.41
+        },
+        {
+          "word": "押解",
+          "weight": 10.69
+        },
+        {
+          "word": "打死",
+          "weight": 10.36
+        },
+        {
+          "word": "毫无",
+          "weight": 10.09
+        },
+        {
+          "word": "群臣",
+          "weight": 9.78
+        }
+      ],
+      "share": 0.0966,
+      "coherence": -2.6478,
+      "x": -0.3973,
+      "y": -0.1628,
+      "representative": [
+        {
+          "play_id": "01021006",
+          "title": "天宝图【头、二、三、四、五、六、七本】",
+          "drama_type": "神怪戏"
+        },
+        {
+          "play_id": "80000020",
+          "title": "长坂坡",
+          "drama_type": "历史戏"
+        },
+        {
+          "play_id": "01009006",
+          "title": "长坂坡",
+          "drama_type": "历史戏"
+        },
+        {
+          "play_id": "02006073",
+          "title": "太平桥【头本】",
+          "drama_type": "家庭戏"
+        },
+        {
+          "play_id": "02006074",
+          "title": "太平桥【二本】",
+          "drama_type": "家庭戏"
+        },
+        {
+          "play_id": "01022006",
+          "title": "太平桥",
+          "drama_type": "家庭戏"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "label": "攻打·出战·部将",
+      "top_words": [
+        {
+          "word": "攻打",
+          "weight": 30.78
+        },
+        {
+          "word": "出战",
+          "weight": 29.0
+        },
+        {
+          "word": "部将",
+          "weight": 18.39
+        },
+        {
+          "word": "夫妻",
+          "weight": 16.13
+        },
+        {
+          "word": "闻讯",
+          "weight": 15.65
+        },
+        {
+          "word": "父子",
+          "weight": 15.36
+        },
+        {
+          "word": "救出",
+          "weight": 14.93
+        },
+        {
+          "word": "起兵",
+          "weight": 14.41
+        },
+        {
+          "word": "保护",
+          "weight": 14.22
+        },
+        {
+          "word": "杀死",
+          "weight": 14.21
+        },
+        {
+          "word": "夫妇",
+          "weight": 13.38
+        },
+        {
+          "word": "出征",
+          "weight": 12.08
+        },
+        {
+          "word": "归降",
+          "weight": 11.43
+        },
+        {
+          "word": "追赶",
+          "weight": 11.1
+        },
+        {
+          "word": "镇守",
+          "weight": 10.66
+        }
+      ],
+      "share": 0.1162,
+      "coherence": -2.5124,
+      "x": 0.175,
+      "y": 0.0252,
+      "representative": [
+        {
+          "play_id": "14001004",
+          "title": "九更天",
+          "drama_type": "公案戏"
+        },
+        {
+          "play_id": "01008008",
+          "title": "杜十娘",
+          "drama_type": "公案戏"
+        },
+        {
+          "play_id": "01020013",
+          "title": "铁公鸡【头、二、三本】",
+          "drama_type": "家庭戏"
+        },
+        {
+          "play_id": "01013020",
+          "title": "花蝴蝶",
+          "drama_type": "公案戏"
+        },
+        {
+          "play_id": "04016001",
+          "title": "甘露寺",
+          "drama_type": "历史戏"
+        },
+        {
+          "play_id": "70203104",
+          "title": "香罗带",
+          "drama_type": "公案戏"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "label": "夫妇·饮酒·不忍",
+      "top_words": [
+        {
+          "word": "夫妇",
+          "weight": 25.43
+        },
+        {
+          "word": "饮酒",
+          "weight": 25.39
+        },
+        {
+          "word": "不忍",
+          "weight": 17.01
+        },
+        {
+          "word": "大败",
+          "weight": 14.35
+        },
+        {
+          "word": "交战",
+          "weight": 13.11
+        },
+        {
+          "word": "母子",
+          "weight": 12.92
+        },
+        {
+          "word": "回家",
+          "weight": 12.2
+        },
+        {
+          "word": "回营",
+          "weight": 12.17
+        },
+        {
+          "word": "情形",
+          "weight": 10.9
+        },
+        {
+          "word": "失守",
+          "weight": 10.02
+        },
+        {
+          "word": "父子",
+          "weight": 9.43
+        },
+        {
+          "word": "挂帅",
+          "weight": 9.19
+        },
+        {
+          "word": "调戏",
+          "weight": 8.73
+        },
+        {
+          "word": "请罪",
+          "weight": 8.67
+        },
+        {
+          "word": "出战",
+          "weight": 8.56
+        }
+      ],
+      "share": 0.1048,
+      "coherence": -2.8748,
+      "x": -0.3609,
+      "y": 0.1507,
+      "representative": [
+        {
+          "play_id": "01039001",
+          "title": "贩马记【前本】",
+          "drama_type": "家庭戏"
+        },
+        {
+          "play_id": "03040001",
+          "title": "双玉镯",
+          "drama_type": "公案戏"
+        },
+        {
+          "play_id": "05012001",
+          "title": "吴越春秋【前部】",
+          "drama_type": "其他"
+        },
+        {
+          "play_id": "01027009",
+          "title": "山海关【头、二本】",
+          "drama_type": "神怪戏"
+        },
+        {
+          "play_id": "14003003",
+          "title": "空城计",
+          "drama_type": "历史戏"
+        },
+        {
+          "play_id": "01013011",
+          "title": "伐东吴",
+          "drama_type": "历史戏"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "label": "救出·行至·路过",
+      "top_words": [
+        {
+          "word": "救出",
+          "weight": 18.72
+        },
+        {
+          "word": "行至",
+          "weight": 18.64
+        },
+        {
+          "word": "路过",
+          "weight": 15.16
+        },
+        {
+          "word": "交战",
+          "weight": 15.14
+        },
+        {
+          "word": "封为",
+          "weight": 15.1
+        },
+        {
+          "word": "营救",
+          "weight": 14.99
+        },
+        {
+          "word": "相会",
+          "weight": 14.4
+        },
+        {
+          "word": "保护",
+          "weight": 13.83
+        },
+        {
+          "word": "问斩",
+          "weight": 13.33
+        },
+        {
+          "word": "假扮",
+          "weight": 13.25
+        },
+        {
+          "word": "逃出",
+          "weight": 12.44
+        },
+        {
+          "word": "奉旨",
+          "weight": 11.68
+        },
+        {
+          "word": "妻子",
+          "weight": 11.6
+        },
+        {
+          "word": "问罪",
+          "weight": 11.56
+        },
+        {
+          "word": "得以",
+          "weight": 11.12
+        }
+      ],
+      "share": 0.0942,
+      "coherence": -2.3034,
+      "x": -0.149,
+      "y": -0.3795,
+      "representative": [
+        {
+          "play_id": "02008008",
+          "title": "双尽忠【二本】",
+          "drama_type": "历史戏"
+        },
+        {
+          "play_id": "02008011",
+          "title": "双尽忠【五本】",
+          "drama_type": "历史戏"
+        },
+        {
+          "play_id": "02008012",
+          "title": "双尽忠【六本】",
+          "drama_type": "历史戏"
+        },
+        {
+          "play_id": "02008009",
+          "title": "双尽忠【三本】",
+          "drama_type": "历史戏"
+        },
+        {
+          "play_id": "02008010",
+          "title": "双尽忠【四本】",
+          "drama_type": "历史戏"
+        },
+        {
+          "play_id": "02008007",
+          "title": "双尽忠【头本】",
+          "drama_type": "历史戏"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "label": "杀死·乳母·洞房",
+      "top_words": [
+        {
+          "word": "杀死",
+          "weight": 79.73
+        },
+        {
+          "word": "乳母",
+          "weight": 39.1
+        },
+        {
+          "word": "洞房",
+          "weight": 35.21
+        },
+        {
+          "word": "烧死",
+          "weight": 35.1
+        },
+        {
+          "word": "审问",
+          "weight": 31.17
+        },
+        {
+          "word": "逃出",
+          "weight": 29.17
+        },
+        {
+          "word": "行至",
+          "weight": 25.79
+        },
+        {
+          "word": "结婚",
+          "weight": 24.98
+        },
+        {
+          "word": "店主",
+          "weight": 24.94
+        },
+        {
+          "word": "寺僧",
+          "weight": 24.1
+        },
+        {
+          "word": "成婚",
+          "weight": 23.73
+        },
+        {
+          "word": "奏请",
+          "weight": 23.61
+        },
+        {
+          "word": "救主",
+          "weight": 23.54
+        },
+        {
+          "word": "赴京",
+          "weight": 22.74
+        },
+        {
+          "word": "发现",
+          "weight": 22.61
+        }
+      ],
+      "share": 0.0841,
+      "coherence": -1.0896,
+      "x": 0.4398,
+      "y": -0.1905,
+      "representative": [
+        {
+          "play_id": "02005010",
+          "title": "九莲灯【五本】",
+          "drama_type": "神怪戏"
+        },
+        {
+          "play_id": "02005008",
+          "title": "九莲灯【三本】",
+          "drama_type": "神怪戏"
+        },
+        {
+          "play_id": "02005007",
+          "title": "九莲灯【二本】",
+          "drama_type": "神怪戏"
+        },
+        {
+          "play_id": "02005012",
+          "title": "九莲灯【七本】",
+          "drama_type": "神怪戏"
+        },
+        {
+          "play_id": "02005013",
+          "title": "九莲灯【八本】",
+          "drama_type": "神怪戏"
+        },
+        {
+          "play_id": "02005014",
+          "title": "九莲灯【九本】",
+          "drama_type": "神怪戏"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "label": "杀死·状元·有意",
+      "top_words": [
+        {
+          "word": "杀死",
+          "weight": 22.28
+        },
+        {
+          "word": "状元",
+          "weight": 17.86
+        },
+        {
+          "word": "有意",
+          "weight": 16.33
+        },
+        {
+          "word": "告以",
+          "weight": 15.9
+        },
+        {
+          "word": "回营",
+          "weight": 15.6
+        },
+        {
+          "word": "儿子",
+          "weight": 15.22
+        },
+        {
+          "word": "知道",
+          "weight": 13.89
+        },
+        {
+          "word": "临行",
+          "weight": 12.05
+        },
+        {
+          "word": "母亲",
+          "weight": 11.71
+        },
+        {
+          "word": "父子",
+          "weight": 11.46
+        },
+        {
+          "word": "成亲",
+          "weight": 10.89
+        },
+        {
+          "word": "助战",
+          "weight": 10.69
+        },
+        {
+          "word": "夫妇",
+          "weight": 10.23
+        },
+        {
+          "word": "预备",
+          "weight": 10.22
+        },
+        {
+          "word": "逃走",
+          "weight": 10.04
+        }
+      ],
+      "share": 0.0965,
+      "coherence": -2.7294,
+      "x": -0.1784,
+      "y": 0.3275,
+      "representative": [
+        {
+          "play_id": "02011049",
+          "title": "玉堂春【头本】",
+          "drama_type": "公案戏"
+        },
+        {
+          "play_id": "70801109",
+          "title": "江汉渔歌",
+          "drama_type": "历史戏"
+        },
+        {
+          "play_id": "01025009",
+          "title": "取洛阳",
+          "drama_type": "历史戏"
+        },
+        {
+          "play_id": "01011001",
+          "title": "渑池会",
+          "drama_type": "公案戏"
+        },
+        {
+          "play_id": "01029006",
+          "title": "山海关【五、六本】",
+          "drama_type": "历史戏"
+        },
+        {
+          "play_id": "04013001",
+          "title": "八大锤",
+          "drama_type": "公案戏"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "label": "妻子·投江·夫妻",
+      "top_words": [
+        {
+          "word": "妻子",
+          "weight": 17.38
+        },
+        {
+          "word": "投江",
+          "weight": 16.05
+        },
+        {
+          "word": "夫妻",
+          "weight": 15.45
+        },
+        {
+          "word": "杀害",
+          "weight": 12.49
+        },
+        {
+          "word": "父母",
+          "weight": 12.27
+        },
+        {
+          "word": "害死",
+          "weight": 12.1
+        },
+        {
+          "word": "发配",
+          "weight": 10.8
+        },
+        {
+          "word": "毒死",
+          "weight": 10.1
+        },
+        {
+          "word": "出阵",
+          "weight": 10.1
+        },
+        {
+          "word": "夫妇",
+          "weight": 9.88
+        },
+        {
+          "word": "诬陷",
+          "weight": 9.77
+        },
+        {
+          "word": "印信",
+          "weight": 9.1
+        },
+        {
+          "word": "自缢",
+          "weight": 9.04
+        },
+        {
+          "word": "杀退",
+          "weight": 9.0
+        },
+        {
+          "word": "鬼魂",
+          "weight": 8.7
+        }
+      ],
+      "share": 0.0977,
+      "coherence": -2.6762,
+      "x": 0.0772,
+      "y": 0.3968,
+      "representative": [
+        {
+          "play_id": "70001101",
+          "title": "四进士",
+          "drama_type": "公案戏"
+        },
+        {
+          "play_id": "04034001",
+          "title": "双合印",
+          "drama_type": "公案戏"
+        },
+        {
+          "play_id": "70001111",
+          "title": "文天祥",
+          "drama_type": "历史戏"
+        },
+        {
+          "play_id": "02012012",
+          "title": "九龙杯【七本】",
+          "drama_type": "历史戏"
+        },
+        {
+          "play_id": "01019011",
+          "title": "九龙杯",
+          "drama_type": "历史戏"
+        },
+        {
+          "play_id": "70002105",
+          "title": "赵氏孤儿",
+          "drama_type": "公案戏"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "label": "杀死·母女·父子",
+      "top_words": [
+        {
+          "word": "杀死",
+          "weight": 21.75
+        },
+        {
+          "word": "母女",
+          "weight": 18.03
+        },
+        {
+          "word": "父子",
+          "weight": 17.32
+        },
+        {
+          "word": "全家",
+          "weight": 13.27
+        },
+        {
+          "word": "大败",
+          "weight": 13.06
+        },
+        {
+          "word": "大战",
+          "weight": 12.61
+        },
+        {
+          "word": "行刺",
+          "weight": 12.0
+        },
+        {
+          "word": "行至",
+          "weight": 11.33
+        },
+        {
+          "word": "夫妻",
+          "weight": 10.89
+        },
+        {
+          "word": "邀请",
+          "weight": 10.64
+        },
+        {
+          "word": "途遇",
+          "weight": 10.34
+        },
+        {
+          "word": "忠良",
+          "weight": 9.94
+        },
+        {
+          "word": "自刎",
+          "weight": 9.93
+        },
+        {
+          "word": "在外",
+          "weight": 9.84
+        },
+        {
+          "word": "斩首",
+          "weight": 9.56
+        }
+      ],
+      "share": 0.1108,
+      "coherence": -2.8423,
+      "x": -0.1027,
+      "y": -0.0559,
+      "representative": [
+        {
+          "play_id": "01019001",
+          "title": "进妲己【全本】",
+          "drama_type": "历史戏"
+        },
+        {
+          "play_id": "70203108",
+          "title": "勘玉钏",
+          "drama_type": "公案戏"
+        },
+        {
+          "play_id": "70203201",
+          "title": "大英杰烈",
+          "drama_type": "家庭戏"
+        },
+        {
+          "play_id": "01030004",
+          "title": "三雅园",
+          "drama_type": "历史戏"
+        },
+        {
+          "play_id": "14002005",
+          "title": "打严嵩",
+          "drama_type": "公案戏"
+        },
+        {
+          "play_id": "01024006",
+          "title": "雪杯圆【二本】",
+          "drama_type": "公案戏"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "label": "夫妻·相府·思念",
+      "top_words": [
+        {
+          "word": "夫妻",
+          "weight": 26.39
+        },
+        {
+          "word": "相府",
+          "weight": 16.27
+        },
+        {
+          "word": "思念",
+          "weight": 14.95
+        },
+        {
+          "word": "父亲",
+          "weight": 14.93
+        },
+        {
+          "word": "定计",
+          "weight": 13.78
+        },
+        {
+          "word": "寒窑",
+          "weight": 13.47
+        },
+        {
+          "word": "陷害",
+          "weight": 12.64
+        },
+        {
+          "word": "相认",
+          "weight": 11.62
+        },
+        {
+          "word": "来到",
+          "weight": 10.97
+        },
+        {
+          "word": "抛球",
+          "weight": 10.1
+        },
+        {
+          "word": "令箭",
+          "weight": 9.98
+        },
+        {
+          "word": "回家",
+          "weight": 9.67
+        },
+        {
+          "word": "经商",
+          "weight": 9.1
+        },
+        {
+          "word": "题诗",
+          "weight": 9.08
+        },
+        {
+          "word": "神仙",
+          "weight": 9.03
+        }
+      ],
+      "share": 0.0897,
+      "coherence": -2.5754,
+      "x": 0.3642,
+      "y": 0.2496,
+      "representative": [
+        {
+          "play_id": "70001106",
+          "title": "乌龙院",
+          "drama_type": "家庭戏"
+        },
+        {
+          "play_id": "01039006",
+          "title": "失金钗",
+          "drama_type": "神怪戏"
+        },
+        {
+          "play_id": "01032007",
+          "title": "党人碑",
+          "drama_type": "神怪戏"
+        },
+        {
+          "play_id": "01006009",
+          "title": "连环套【三本】",
+          "drama_type": "公案戏"
+        },
+        {
+          "play_id": "14002002",
+          "title": "打渔杀家",
+          "drama_type": "公案戏"
+        },
+        {
+          "play_id": "10001032",
+          "title": "珠帘寨",
+          "drama_type": "历史戏"
+        }
+      ]
+    }
+  ],
+  "k_selection": [
+    {
+      "k": 5,
+      "perplexity": 1763.2,
+      "coherence": -2.5887
+    },
+    {
+      "k": 6,
+      "perplexity": 1803.3,
+      "coherence": -2.6532
+    },
+    {
+      "k": 7,
+      "perplexity": 1895.0,
+      "coherence": -2.5689
+    },
+    {
+      "k": 8,
+      "perplexity": 1990.4,
+      "coherence": -2.5864
+    },
+    {
+      "k": 9,
+      "perplexity": 2049.7,
+      "coherence": -2.5335
+    },
+    {
+      "k": 10,
+      "perplexity": 2102.3,
+      "coherence": -2.4895
+    },
+    {
+      "k": 11,
+      "perplexity": 2193.5,
+      "coherence": -2.6327
+    },
+    {
+      "k": 12,
+      "perplexity": 2285.2,
+      "coherence": -2.5948
+    },
+    {
+      "k": 13,
+      "perplexity": 2351.1,
+      "coherence": -2.6267
+    },
+    {
+      "k": 14,
+      "perplexity": 2430.7,
+      "coherence": -2.6599
+    },
+    {
+      "k": 15,
+      "perplexity": 2501.6,
+      "coherence": -2.5445
+    }
+  ],
+  "stability": {
+    "nmf_mean_cosine": 0.461,
+    "lda_seed_mean_cosine": 0.537,
+    "seeds": [
+      0,
+      7
+    ],
+    "per_topic": [
+      {
+        "id": 0,
+        "label": "进京·镇守·父子",
+        "nmf_cosine": 0.366,
+        "lda_seed_cosine": 0.45
+      },
+      {
+        "id": 1,
+        "label": "自刎·报仇·匈奴",
+        "nmf_cosine": 0.585,
+        "lda_seed_cosine": 0.486
+      },
+      {
+        "id": 2,
+        "label": "攻打·出战·部将",
+        "nmf_cosine": 0.122,
+        "lda_seed_cosine": 0.55
+      },
+      {
+        "id": 3,
+        "label": "夫妇·饮酒·不忍",
+        "nmf_cosine": 0.457,
+        "lda_seed_cosine": 0.492
+      },
+      {
+        "id": 4,
+        "label": "救出·行至·路过",
+        "nmf_cosine": 0.642,
+        "lda_seed_cosine": 0.621
+      },
+      {
+        "id": 5,
+        "label": "杀死·乳母·洞房",
+        "nmf_cosine": 0.859,
+        "lda_seed_cosine": 0.874
+      },
+      {
+        "id": 6,
+        "label": "杀死·状元·有意",
+        "nmf_cosine": 0.462,
+        "lda_seed_cosine": 0.485
+      },
+      {
+        "id": 7,
+        "label": "妻子·投江·夫妻",
+        "nmf_cosine": 0.353,
+        "lda_seed_cosine": 0.504
+      },
+      {
+        "id": 8,
+        "label": "杀死·母女·父子",
+        "nmf_cosine": 0.304,
+        "lda_seed_cosine": 0.499
+      },
+      {
+        "id": 9,
+        "label": "夫妻·相府·思念",
+        "nmf_cosine": 0.46,
+        "lda_seed_cosine": 0.409
+      }
+    ]
+  }
+}

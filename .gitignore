@@ -1,0 +1,45 @@
+# Local editor and OS files
+.DS_Store
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+backend/.env
+desktop/embedded.env
+
+# Node / frontend / desktop dependencies
+node_modules/
+frontend/node_modules/
+desktop/node_modules/
+
+# Build outputs
+build/
+dist/
+frontend/dist/
+desktop/resources/
+desktop/release/
+*.log
+
+# Large source datasets generated or supplied outside Git
+1-I_opera_dataset.zip
+data/raw/
+
+# Runtime artifacts
+*.sqlite-shm
+*.sqlite-wal
+scratch_extract/
+*.bak.*
+*.beforeRewrite.*

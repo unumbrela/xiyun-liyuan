@@ -1,0 +1,50 @@
+{
+  "name": "xiyun-liyuan-desktop",
+  "version": "1.0.1",
+  "description": "戏韵·梨园谱系 — 京剧剧本可视分析桌面应用",
+  "main": "main.js",
+  "author": "ChinaVis 2026 · 赛题 1-I",
+  "license": "MIT",
+  "scripts": {
+    "dev:web": "npm --prefix ../frontend run dev",
+    "dev:app": "wait-on tcp:127.0.0.1:5173 && electron .",
+    "dev": "concurrently -k -n WEB,APP -c cyan,magenta \"npm run dev:web\" \"npm run dev:app\"",
+    "build:web": "npm --prefix ../frontend run build",
+    "prepare:res": "node prepare-resources.mjs",
+    "dist:win": "npm run build:web && npm run prepare:res && electron-builder --win --x64",
+    "dist:linux": "npm run build:web && npm run prepare:res && electron-builder --linux"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "electron": "^31.7.6",
+    "electron-builder": "^24.13.3",
+    "wait-on": "^8.0.1"
+  },
+  "build": {
+    "appId": "com.chinavis.xiyun-liyuan",
+    "productName": "戏韵梨园谱系",
+    "directories": { "output": "release", "buildResources": "build" },
+    "files": ["main.js", "preload.js", "package.json"],
+    "extraResources": [
+      { "from": "resources", "to": "." }
+    ],
+    "win": {
+      "target": ["nsis", "portable"],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "shortcutName": "戏韵梨园谱系",
+      "artifactName": "戏韵梨园谱系-${version}-${arch}-安装版.${ext}"
+    },
+    "portable": {
+      "artifactName": "戏韵梨园谱系-${version}-${arch}-绿色版.${ext}"
+    },
+    "linux": {
+      "target": ["AppImage"],
+      "category": "Education"
+    }
+  }
+}

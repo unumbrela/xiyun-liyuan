@@ -1,0 +1,878 @@
+{
+  "types": [
+    "历史戏",
+    "家庭戏",
+    "公案戏",
+    "神怪戏",
+    "其他"
+  ],
+  "by_type": {
+    "历史戏": {
+      "count": 580,
+      "mean": {
+        "n_nodes": 14.3948,
+        "n_edges": 60.4552,
+        "density": 0.6386,
+        "avg_degree": 6.6644,
+        "max_degree": 11.0362,
+        "avg_clustering": 0.8402,
+        "centralization": 0.3056,
+        "modularity": 0.2118,
+        "n_communities": 2.819,
+        "centralization_z": 2.1876,
+        "modularity_z": 3.2289
+      },
+      "median": {
+        "n_nodes": 12.0,
+        "n_edges": 36.0,
+        "density": 0.6133,
+        "avg_degree": 6.1395,
+        "max_degree": 9.0,
+        "avg_clustering": 0.8622,
+        "centralization": 0.3333,
+        "modularity": 0.2114,
+        "n_communities": 3.0,
+        "centralization_z": 1.188,
+        "modularity_z": 0.0
+      },
+      "representative": [
+        {
+          "play_id": "70801115",
+          "title": "琵琶行",
+          "n_nodes": 86,
+          "n_edges": 387,
+          "density": 0.1059,
+          "centralization": 0.4818,
+          "main_char": "郭霁青"
+        },
+        {
+          "play_id": "70001111",
+          "title": "文天祥",
+          "n_nodes": 67,
+          "n_edges": 322,
+          "density": 0.1456,
+          "centralization": 0.6776,
+          "main_char": "文天祥"
+        },
+        {
+          "play_id": "03089002",
+          "title": "双挂印",
+          "n_nodes": 63,
+          "n_edges": 389,
+          "density": 0.1992,
+          "centralization": 0.394,
+          "main_char": "白天佐"
+        },
+        {
+          "play_id": "70801109",
+          "title": "江汉渔歌",
+          "n_nodes": 59,
+          "n_edges": 283,
+          "density": 0.1654,
+          "centralization": 0.382,
+          "main_char": "阮复成"
+        },
+        {
+          "play_id": "03059004",
+          "title": "风流双枪将",
+          "n_nodes": 53,
+          "n_edges": 643,
+          "density": 0.4666,
+          "centralization": 0.3345,
+          "main_char": "关胜"
+        },
+        {
+          "play_id": "03088001",
+          "title": "独占花魁",
+          "n_nodes": 53,
+          "n_edges": 202,
+          "density": 0.1466,
+          "centralization": 0.3473,
+          "main_char": "秦重"
+        },
+        {
+          "play_id": "03101003",
+          "title": "走麦城",
+          "n_nodes": 49,
+          "n_edges": 262,
+          "density": 0.2228,
+          "centralization": 0.4845,
+          "main_char": "报子"
+        },
+        {
+          "play_id": "01020001",
+          "title": "麦城升天",
+          "n_nodes": 48,
+          "n_edges": 260,
+          "density": 0.2305,
+          "centralization": 0.3367,
+          "main_char": "探子"
+        }
+      ]
+    },
+    "家庭戏": {
+      "count": 212,
+      "mean": {
+        "n_nodes": 11.7311,
+        "n_edges": 41.3208,
+        "density": 0.7034,
+        "avg_degree": 5.3561,
+        "max_degree": 8.7642,
+        "avg_clustering": 0.8478,
+        "centralization": 0.2701,
+        "modularity": 0.1553,
+        "n_communities": 2.4858,
+        "centralization_z": 1.8076,
+        "modularity_z": 1.5001
+      },
+      "median": {
+        "n_nodes": 8.0,
+        "n_edges": 20.0,
+        "density": 0.7143,
+        "avg_degree": 5.0,
+        "max_degree": 7.0,
+        "avg_clustering": 0.8797,
+        "centralization": 0.3214,
+        "modularity": 0.1245,
+        "n_communities": 2.0,
+        "centralization_z": 0.5515,
+        "modularity_z": 0.0
+      },
+      "representative": [
+        {
+          "play_id": "03050003",
+          "title": "铁丘坟",
+          "n_nodes": 63,
+          "n_edges": 194,
+          "density": 0.0993,
+          "centralization": 0.1306,
+          "main_char": "武三思"
+        },
+        {
+          "play_id": "03038003",
+          "title": "秋生造律",
+          "n_nodes": 50,
+          "n_edges": 234,
+          "density": 0.191,
+          "centralization": 0.3112,
+          "main_char": "刘邦"
+        },
+        {
+          "play_id": "03050002",
+          "title": "九焰山",
+          "n_nodes": 44,
+          "n_edges": 233,
+          "density": 0.2463,
+          "centralization": 0.5703,
+          "main_char": "薛刚"
+        },
+        {
+          "play_id": "05019003",
+          "title": "五彩舆【八本】",
+          "n_nodes": 43,
+          "n_edges": 278,
+          "density": 0.3079,
+          "centralization": 0.4512,
+          "main_char": "海瑞"
+        },
+        {
+          "play_id": "05018001",
+          "title": "五彩舆【头本】",
+          "n_nodes": 42,
+          "n_edges": 226,
+          "density": 0.2625,
+          "centralization": 0.3902,
+          "main_char": "海瑞"
+        },
+        {
+          "play_id": "01039001",
+          "title": "贩马记【前本】",
+          "n_nodes": 41,
+          "n_edges": 169,
+          "density": 0.2061,
+          "centralization": 0.3615,
+          "main_char": "李桂枝"
+        },
+        {
+          "play_id": "01029004",
+          "title": "九阳钟【二本】",
+          "n_nodes": 40,
+          "n_edges": 160,
+          "density": 0.2051,
+          "centralization": 0.1889,
+          "main_char": "探子"
+        },
+        {
+          "play_id": "03077001",
+          "title": "赵五娘",
+          "n_nodes": 39,
+          "n_edges": 175,
+          "density": 0.2362,
+          "centralization": 0.5,
+          "main_char": "蔡邕"
+        }
+      ]
+    },
+    "公案戏": {
+      "count": 241,
+      "mean": {
+        "n_nodes": 15.3693,
+        "n_edges": 68.5602,
+        "density": 0.6495,
+        "avg_degree": 6.8753,
+        "max_degree": 11.6971,
+        "avg_clustering": 0.8581,
+        "centralization": 0.3017,
+        "modularity": 0.196,
+        "n_communities": 2.8257,
+        "centralization_z": 2.4237,
+        "modularity_z": 2.6123
+      },
+      "median": {
+        "n_nodes": 11.0,
+        "n_edges": 38.0,
+        "density": 0.6397,
+        "avg_degree": 6.581,
+        "max_degree": 9.0,
+        "avg_clustering": 0.8667,
+        "centralization": 0.3333,
+        "modularity": 0.2018,
+        "n_communities": 3.0,
+        "centralization_z": 1.257,
+        "modularity_z": 0.0
+      },
+      "representative": [
+        {
+          "play_id": "01035001",
+          "title": "狸猫换太子【三本】",
+          "n_nodes": 62,
+          "n_edges": 616,
+          "density": 0.3258,
+          "centralization": 0.4426,
+          "main_char": "包拯"
+        },
+        {
+          "play_id": "03053001",
+          "title": "打銮驾",
+          "n_nodes": 56,
+          "n_edges": 441,
+          "density": 0.2864,
+          "centralization": 0.4195,
+          "main_char": "庞昱"
+        },
+        {
+          "play_id": "05020001",
+          "title": "香莲帕【头、二本】",
+          "n_nodes": 56,
+          "n_edges": 288,
+          "density": 0.187,
+          "centralization": 0.3529,
+          "main_char": "李良"
+        },
+        {
+          "play_id": "01025001",
+          "title": "宏碧缘【五本】",
+          "n_nodes": 54,
+          "n_edges": 300,
+          "density": 0.2096,
+          "centralization": 0.3505,
+          "main_char": "任正千"
+        },
+        {
+          "play_id": "03071002",
+          "title": "小鳌山",
+          "n_nodes": 53,
+          "n_edges": 394,
+          "density": 0.2859,
+          "centralization": 0.4223,
+          "main_char": "马尾兰"
+        },
+        {
+          "play_id": "01024002",
+          "title": "宏碧缘【四本】",
+          "n_nodes": 49,
+          "n_edges": 182,
+          "density": 0.1548,
+          "centralization": 0.3382,
+          "main_char": "余千"
+        },
+        {
+          "play_id": "01033001",
+          "title": "狸猫换太子【头本】",
+          "n_nodes": 49,
+          "n_edges": 279,
+          "density": 0.2372,
+          "centralization": 0.2739,
+          "main_char": "刘妃"
+        },
+        {
+          "play_id": "04023001",
+          "title": "武松",
+          "n_nodes": 47,
+          "n_edges": 129,
+          "density": 0.1193,
+          "centralization": 0.7155,
+          "main_char": "武松"
+        }
+      ]
+    },
+    "神怪戏": {
+      "count": 143,
+      "mean": {
+        "n_nodes": 12.8322,
+        "n_edges": 49.958,
+        "density": 0.6759,
+        "avg_degree": 5.864,
+        "max_degree": 9.4476,
+        "avg_clustering": 0.8382,
+        "centralization": 0.2738,
+        "modularity": 0.1951,
+        "n_communities": 2.6084,
+        "centralization_z": 1.7971,
+        "modularity_z": 2.5606
+      },
+      "median": {
+        "n_nodes": 10.0,
+        "n_edges": 27.0,
+        "density": 0.6667,
+        "avg_degree": 5.2,
+        "max_degree": 8.0,
+        "avg_clustering": 0.8808,
+        "centralization": 0.3111,
+        "modularity": 0.1737,
+        "n_communities": 2.0,
+        "centralization_z": 0.734,
+        "modularity_z": 0.0
+      },
+      "representative": [
+        {
+          "play_id": "01022012",
+          "title": "天宝图【八、九、十、十一、十二、十三、十四、十五、十六本】",
+          "n_nodes": 60,
+          "n_edges": 251,
+          "density": 0.1418,
+          "centralization": 0.2741,
+          "main_char": "院子"
+        },
+        {
+          "play_id": "70805104",
+          "title": "大闹天宫",
+          "n_nodes": 52,
+          "n_edges": 379,
+          "density": 0.2858,
+          "centralization": 0.3349,
+          "main_char": "孙悟空"
+        },
+        {
+          "play_id": "03012003",
+          "title": "乾坤福寿镜",
+          "n_nodes": 49,
+          "n_edges": 227,
+          "density": 0.193,
+          "centralization": 0.5155,
+          "main_char": "林鹤"
+        },
+        {
+          "play_id": "01021006",
+          "title": "天宝图【头、二、三、四、五、六、七本】",
+          "n_nodes": 48,
+          "n_edges": 150,
+          "density": 0.133,
+          "centralization": 0.3275,
+          "main_char": "李春芳"
+        },
+        {
+          "play_id": "05022001",
+          "title": "龙凤帕【头本】",
+          "n_nodes": 43,
+          "n_edges": 182,
+          "density": 0.2016,
+          "centralization": 0.338,
+          "main_char": "陆凤阳"
+        },
+        {
+          "play_id": "01018001",
+          "title": "朝歌恨【全本】",
+          "n_nodes": 38,
+          "n_edges": 171,
+          "density": 0.2432,
+          "centralization": 0.4279,
+          "main_char": "姬昌"
+        },
+        {
+          "play_id": "03094001",
+          "title": "意中缘",
+          "n_nodes": 37,
+          "n_edges": 155,
+          "density": 0.2327,
+          "centralization": 0.3706,
+          "main_char": "杨云友"
+        },
+        {
+          "play_id": "01028002",
+          "title": "九阳钟【头本】",
+          "n_nodes": 36,
+          "n_edges": 166,
+          "density": 0.2635,
+          "centralization": 0.2958,
+          "main_char": "陈希真"
+        }
+      ]
+    },
+    "其他": {
+      "count": 286,
+      "mean": {
+        "n_nodes": 10.7832,
+        "n_edges": 40.5944,
+        "density": 0.7279,
+        "avg_degree": 5.2431,
+        "max_degree": 8.1993,
+        "avg_clustering": 0.8114,
+        "centralization": 0.2592,
+        "modularity": 0.1581,
+        "n_communities": 2.3531,
+        "centralization_z": 1.4156,
+        "modularity_z": 2.3034
+      },
+      "median": {
+        "n_nodes": 7.0,
+        "n_edges": 17.5,
+        "density": 0.7143,
+        "avg_degree": 4.889,
+        "max_degree": 6.0,
+        "avg_clustering": 0.8778,
+        "centralization": 0.2857,
+        "modularity": 0.145,
+        "n_communities": 2.0,
+        "centralization_z": 0.0,
+        "modularity_z": 0.0
+      },
+      "representative": [
+        {
+          "play_id": "03109005",
+          "title": "玉麟图",
+          "n_nodes": 69,
+          "n_edges": 449,
+          "density": 0.1914,
+          "centralization": 0.3481,
+          "main_char": "林冲"
+        },
+        {
+          "play_id": "03106005",
+          "title": "窃兵符",
+          "n_nodes": 65,
+          "n_edges": 341,
+          "density": 0.1639,
+          "centralization": 0.3306,
+          "main_char": "无忌"
+        },
+        {
+          "play_id": "03074001",
+          "title": "介子推",
+          "n_nodes": 54,
+          "n_edges": 308,
+          "density": 0.2152,
+          "centralization": 0.4819,
+          "main_char": "介子推"
+        },
+        {
+          "play_id": "03050001",
+          "title": "闹花灯",
+          "n_nodes": 49,
+          "n_edges": 283,
+          "density": 0.2406,
+          "centralization": 0.6831,
+          "main_char": "薛刚"
+        },
+        {
+          "play_id": "03028001",
+          "title": "潞安州",
+          "n_nodes": 48,
+          "n_edges": 285,
+          "density": 0.2527,
+          "centralization": 0.4912,
+          "main_char": "金兀术"
+        },
+        {
+          "play_id": "03057001",
+          "title": "大观园",
+          "n_nodes": 42,
+          "n_edges": 269,
+          "density": 0.3124,
+          "centralization": 0.5427,
+          "main_char": "贾宝玉"
+        },
+        {
+          "play_id": "03078003",
+          "title": "孟尝君",
+          "n_nodes": 39,
+          "n_edges": 196,
+          "density": 0.2645,
+          "centralization": 0.4147,
+          "main_char": "孟尝君"
+        },
+        {
+          "play_id": "02010002",
+          "title": "夺锦标【全本】",
+          "n_nodes": 38,
+          "n_edges": 346,
+          "density": 0.4922,
+          "centralization": 0.3363,
+          "main_char": "公孙胜"
+        }
+      ]
+    }
+  },
+  "metric_cols": [
+    "n_nodes",
+    "n_edges",
+    "density",
+    "avg_degree",
+    "max_degree",
+    "avg_clustering",
+    "centralization",
+    "modularity",
+    "n_communities",
+    "centralization_z",
+    "modularity_z"
+  ],
+  "role_structure": {
+    "生": {
+      "mean_degree_centrality": 0.6008,
+      "mean_betweenness": 0.0497,
+      "n_nodes_total": 5881,
+      "bridge_share": 0.5076
+    },
+    "旦": {
+      "mean_degree_centrality": 0.5707,
+      "mean_betweenness": 0.0295,
+      "n_nodes_total": 2375,
+      "bridge_share": 0.1198
+    },
+    "净": {
+      "mean_degree_centrality": 0.4894,
+      "mean_betweenness": 0.033,
+      "n_nodes_total": 4578,
+      "bridge_share": 0.2291
+    },
+    "丑": {
+      "mean_degree_centrality": 0.4479,
+      "mean_betweenness": 0.0194,
+      "n_nodes_total": 4416,
+      "bridge_share": 0.1255
+    },
+    "杂": {
+      "mean_degree_centrality": 0.3935,
+      "mean_betweenness": 0.0121,
+      "n_nodes_total": 2209,
+      "bridge_share": 0.0181
+    }
+  },
+  "n_bridge_plays": 1052,
+  "assortativity_by_type": {
+    "历史戏": -0.1179,
+    "家庭戏": -0.207,
+    "公案戏": -0.1324,
+    "神怪戏": -0.1672,
+    "其他": -0.2139,
+    "全库": -0.1567
+  },
+  "type_significance": {
+    "types": [
+      "历史戏",
+      "家庭戏",
+      "公案戏",
+      "神怪戏"
+    ],
+    "metrics": [
+      "网络规模",
+      "中心势",
+      "模块度",
+      "密度"
+    ],
+    "pairs": {
+      "网络规模": [
+        {
+          "a": "历史戏",
+          "b": "家庭戏",
+          "median_a": 12.0,
+          "median_b": 8.0,
+          "pvalue": 0.0,
+          "p_adj": 0.0,
+          "significant": true
+        },
+        {
+          "a": "历史戏",
+          "b": "公案戏",
+          "median_a": 12.0,
+          "median_b": 11.0,
+          "pvalue": 0.7981,
+          "p_adj": 0.7981,
+          "significant": false
+        },
+        {
+          "a": "历史戏",
+          "b": "神怪戏",
+          "median_a": 12.0,
+          "median_b": 10.0,
+          "pvalue": 0.0117,
+          "p_adj": 0.0234,
+          "significant": true
+        },
+        {
+          "a": "家庭戏",
+          "b": "公案戏",
+          "median_a": 8.0,
+          "median_b": 11.0,
+          "pvalue": 0.0001,
+          "p_adj": 0.0002,
+          "significant": true
+        },
+        {
+          "a": "家庭戏",
+          "b": "神怪戏",
+          "median_a": 8.0,
+          "median_b": 10.0,
+          "pvalue": 0.2409,
+          "p_adj": 0.2891,
+          "significant": false
+        },
+        {
+          "a": "公案戏",
+          "b": "神怪戏",
+          "median_a": 11.0,
+          "median_b": 10.0,
+          "pvalue": 0.0189,
+          "p_adj": 0.0284,
+          "significant": true
+        }
+      ],
+      "中心势": [
+        {
+          "a": "历史戏",
+          "b": "家庭戏",
+          "median_a": 0.3333,
+          "median_b": 0.3214,
+          "pvalue": 0.1037,
+          "p_adj": 0.3498,
+          "significant": false
+        },
+        {
+          "a": "历史戏",
+          "b": "公案戏",
+          "median_a": 0.3333,
+          "median_b": 0.3333,
+          "pvalue": 0.8775,
+          "p_adj": 0.9983,
+          "significant": false
+        },
+        {
+          "a": "历史戏",
+          "b": "神怪戏",
+          "median_a": 0.3333,
+          "median_b": 0.3111,
+          "pvalue": 0.1321,
+          "p_adj": 0.3498,
+          "significant": false
+        },
+        {
+          "a": "家庭戏",
+          "b": "公案戏",
+          "median_a": 0.3214,
+          "median_b": 0.3333,
+          "pvalue": 0.1921,
+          "p_adj": 0.3498,
+          "significant": false
+        },
+        {
+          "a": "家庭戏",
+          "b": "神怪戏",
+          "median_a": 0.3214,
+          "median_b": 0.3111,
+          "pvalue": 0.9983,
+          "p_adj": 0.9983,
+          "significant": false
+        },
+        {
+          "a": "公案戏",
+          "b": "神怪戏",
+          "median_a": 0.3333,
+          "median_b": 0.3111,
+          "pvalue": 0.2332,
+          "p_adj": 0.3498,
+          "significant": false
+        }
+      ],
+      "模块度": [
+        {
+          "a": "历史戏",
+          "b": "家庭戏",
+          "median_a": 0.2114,
+          "median_b": 0.1245,
+          "pvalue": 0.0,
+          "p_adj": 0.0,
+          "significant": true
+        },
+        {
+          "a": "历史戏",
+          "b": "公案戏",
+          "median_a": 0.2114,
+          "median_b": 0.2018,
+          "pvalue": 0.1488,
+          "p_adj": 0.1786,
+          "significant": false
+        },
+        {
+          "a": "历史戏",
+          "b": "神怪戏",
+          "median_a": 0.2114,
+          "median_b": 0.1737,
+          "pvalue": 0.1397,
+          "p_adj": 0.1786,
+          "significant": false
+        },
+        {
+          "a": "家庭戏",
+          "b": "公案戏",
+          "median_a": 0.1245,
+          "median_b": 0.2018,
+          "pvalue": 0.0023,
+          "p_adj": 0.0068,
+          "significant": true
+        },
+        {
+          "a": "家庭戏",
+          "b": "神怪戏",
+          "median_a": 0.1245,
+          "median_b": 0.1737,
+          "pvalue": 0.0202,
+          "p_adj": 0.0403,
+          "significant": true
+        },
+        {
+          "a": "公案戏",
+          "b": "神怪戏",
+          "median_a": 0.2018,
+          "median_b": 0.1737,
+          "pvalue": 0.7726,
+          "p_adj": 0.7726,
+          "significant": false
+        }
+      ],
+      "密度": [
+        {
+          "a": "历史戏",
+          "b": "家庭戏",
+          "median_a": 0.6133,
+          "median_b": 0.7143,
+          "pvalue": 0.0014,
+          "p_adj": 0.0086,
+          "significant": true
+        },
+        {
+          "a": "历史戏",
+          "b": "公案戏",
+          "median_a": 0.6133,
+          "median_b": 0.6397,
+          "pvalue": 0.5702,
+          "p_adj": 0.5702,
+          "significant": false
+        },
+        {
+          "a": "历史戏",
+          "b": "神怪戏",
+          "median_a": 0.6133,
+          "median_b": 0.6667,
+          "pvalue": 0.1111,
+          "p_adj": 0.2223,
+          "significant": false
+        },
+        {
+          "a": "家庭戏",
+          "b": "公案戏",
+          "median_a": 0.7143,
+          "median_b": 0.6397,
+          "pvalue": 0.0239,
+          "p_adj": 0.0718,
+          "significant": false
+        },
+        {
+          "a": "家庭戏",
+          "b": "神怪戏",
+          "median_a": 0.7143,
+          "median_b": 0.6667,
+          "pvalue": 0.4066,
+          "p_adj": 0.488,
+          "significant": false
+        },
+        {
+          "a": "公案戏",
+          "b": "神怪戏",
+          "median_a": 0.6397,
+          "median_b": 0.6667,
+          "pvalue": 0.3028,
+          "p_adj": 0.4543,
+          "significant": false
+        }
+      ]
+    }
+  },
+  "period_evolution": {
+    "period_order": [
+      "清末民国",
+      "建国初期",
+      "当代"
+    ],
+    "metrics": [
+      "网络规模",
+      "网络密度",
+      "中心势",
+      "模块度"
+    ],
+    "by_period": {
+      "清末民国": {
+        "count": 698,
+        "网络规模": 10.7837,
+        "网络密度": 0.7083,
+        "中心势": 0.2726,
+        "模块度": 0.164
+      },
+      "建国初期": {
+        "count": 718,
+        "网络规模": 15.4429,
+        "网络密度": 0.6344,
+        "中心势": 0.3033,
+        "模块度": 0.2125
+      },
+      "当代": {
+        "count": 46,
+        "网络规模": 18.3478,
+        "网络密度": 0.673,
+        "中心势": 0.2714,
+        "模块度": 0.1973
+      }
+    },
+    "significance": {
+      "网络规模": {
+        "kw_p": 0.0,
+        "kw_p_adj": 0.0,
+        "significant": true
+      },
+      "网络密度": {
+        "kw_p": 0.0,
+        "kw_p_adj": 0.0,
+        "significant": true
+      },
+      "中心势": {
+        "kw_p": 0.0165,
+        "kw_p_adj": 0.0165,
+        "significant": true
+      },
+      "模块度": {
+        "kw_p": 0.0,
+        "kw_p_adj": 0.0,
+        "significant": true
+      }
+    }
+  }
+}
