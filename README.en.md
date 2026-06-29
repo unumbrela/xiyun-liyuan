@@ -30,8 +30,7 @@ No Python / Node needed — [**get it from Releases**](https://github.com/unumbr
 
 | File | Notes |
 | --- | --- |
-| `戏韵梨园谱系-x64-绿色版.exe` | Portable, double-click to run |
-| `戏韵梨园谱系-x64-安装版.exe` | Installer, can create a desktop shortcut |
+| `XiyunLiyuan-1.0.1-x64-portable.exe` | Portable, double-click to run |
 
 The backend starts and stops with the app. A limited demo key is bundled so the AI assistant works out of the box; you can switch to your own DeepSeek API key in settings.
 
