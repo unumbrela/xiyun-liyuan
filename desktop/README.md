@@ -63,6 +63,10 @@ pip install fastapi uvicorn pandas pyarrow numpy networkx openai httpx pyinstall
 `DEEPSEEK_API_KEY` / `DEEPSEEK_BASE_URL` / `DEEPSEEK_MODEL` 等允许项，
 写入 `desktop\resources\config\embedded.env`，最终随 Windows 包内嵌。
 
+> ⚠️ **公开发布注意**：内嵌的 Key 会随 exe 一起被任何人解包取出。若要把 exe 公开发到
+> GitHub Releases，请**专门申请一把独立的 Key、在 DeepSeek 后台设好额度上限**再内嵌，
+> 切勿使用个人主力 Key；不想暴露 Key 时，把内嵌项留空、让用户在应用设置里自填即可。
+
 **步骤**：
 
 ```bat

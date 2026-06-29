@@ -24,6 +24,22 @@ An end-to-end visual analytics system over **1,473 Peking Opera scripts**. A Pyt
 
 ---
 
+## Download · desktop app (Windows, no install)
+
+No Python / Node needed — [**get it from Releases**](https://github.com/unumbrela/xiyun-liyuan/releases/latest)
+
+| File | Notes |
+| --- | --- |
+| `戏韵梨园谱系-x64-绿色版.exe` | Portable, double-click to run |
+| `戏韵梨园谱系-x64-安装版.exe` | Installer, can create a desktop shortcut |
+
+The backend starts and stops with the app. A limited demo key is bundled so the AI assistant works out of the box; you can switch to your own DeepSeek API key in settings.
+
+> The exe is not code-signed, so Windows SmartScreen may warn about an "unknown publisher" on first run — choose "Run anyway".
+> To run from source instead, see "Quick start" below.
+
+---
+
 ## What this project is
 
 The input is 1,473 Peking Opera script PDFs. The system parses them into a unified corpus, then runs five analyses — role types, character relationships, plot topics, narrative structure, and cross-dimension correlation — and turns each result into an interactive visualization.
