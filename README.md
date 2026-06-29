@@ -1,226 +1,213 @@
-# 戏韵·梨园谱系 — 京剧剧本可视分析系统（ChinaVis 2026 赛题 1-I）
+<div align="center">
 
-面向赛题 1-I 京剧数据集的**多模块可视分析软件**：一份语料底座驱动五项任务模块，
-并以「开篇导览 → 数据分析 → 结语余韵」的完整叙事弧讲好京剧的故事。
-左侧导航在「开篇导览 / 总览 / 行当分类 / 角色关系网络 / 主题 / 叙事 / 综合 / 双剧对比 / 结语余韵」之间切换。
+# 戏韵 · 梨园谱系
 
-**开篇导览**（默认首屏）：京剧溯源——发展时间线、**中国戏曲地图**（徽班进京·徽汉合流的源流叙事，
-点选各地剧种）、生旦净丑行当与扮相（真实剧照）、脸谱色彩象征、唱念做打四功、剧目类型题材，
-为后续数据分析铺陈文化语境。**结语余韵**：综述五维发现汇成的统一故事（实时取真实指标）、
-诚实的方法边界、数字人文展望与数据来源致谢。
+**京剧剧本可视分析系统**
 
-## 成果概览（已跑通）
+**简体中文** · [English](README.en.md)
 
-- **数据底座**：1473 部剧本 PDF 全部解析（100%），7656 标注角色、360,223 条对白 →
-  `corpus.jsonl` + `plays.sqlite`，供全部任务复用。
-- **任务一 · 行当分类**：7656 个主要角色标注中，7428 个有对白/出场实例进入训练；逻辑回归
-  Pipeline（表演型/结构/画像特征 + 台词 TF-IDF）实例级 5 折 **macro-F1 0.704**，
-  按剧目分组验证 **0.696**；推断 15,034 个未标注出场角色，并按高/中/低置信度标记待核样本。
-  视图：分布 / 置信度审计 / 谱系旭日 / 特征雷达 / 表演型热力 / 时期演化 / 剧目钻取。
-- **任务二 · 角色关系网络**：同场共现 + 对话邻接建网，按剧目类型（历史/家庭/公案/神怪）
-  对比网络结构（规模/密度/中心势/模块度）。视图：类型对比柱 / 雷达 / 全库散点 /
-  单剧力导向关系图（按行当着色、中心性定大小）。
-- **任务三 · 主题提取**：对情节做 LDA 主题建模（按"故事"计频 + 裸名黑名单剔除人名/道具等实体，
-  数据驱动选出 10 个母题），分析主题构成 / 主题共现组合 / 原型组合聚类 / 跨剧目类型与时期比较。
-  视图：主题占比 / 关键词 / **主题分布图（JS 距离+MDS，点选联动代表剧目）** / 共现热力 /
-  原型堆叠 / 类型×主题热力 / 单剧主题饼 + 相似剧推荐。
-- **任务四 · 叙事结构**：以唱念做打标记合成逐场「戏剧强度」曲线（唱腔=文、做打=武、对白切换=冲突），
-  识别开端/发展/高潮/结局阶段，KMeans 聚类 5 种典型叙事弧线。视图：弧线原型 / 高潮位置直方 /
-  跨类型节奏对比 / 单剧叙事曲线（阶段分带 + 高潮标注 + 文武双线）。
-- **任务五 · 综合关联**：打通关系×主题×叙事×行当四维，计算跨维度相关、协同链路与综合原型聚类。
-  视图：跨维度相关热力 / 关联发现 / 类型→主题→叙事 Sankey / 综合原型雷达+卡片 / 单剧四维联动档案。
-- **软件形态**：Python(FastAPI) 后端 + React/Vite + ECharts 多模块前端，左侧导航壳，
-  支持 `#task1`/`#task2` 深链。**全局剧目联动**：侧栏搜索任一剧目设为「当前剧目」，
-  五个任务模块自动联动展示该剧的行当/网络/主题/叙事/四维档案（单一真相源，localStorage 持久）。
+[![License: MIT](https://img.shields.io/badge/License-MIT-c0392b.svg)](LICENSE)
+![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-backend-009688?logo=fastapi&logoColor=white)
+![React](https://img.shields.io/badge/React-Vite-61DAFB?logo=react&logoColor=white)
+![ECharts](https://img.shields.io/badge/ECharts-charts-AA344D)
+![Electron](https://img.shields.io/badge/Electron-desktop-47848F?logo=electron&logoColor=white)
 
-## 目录
+一套对 **1473 部京剧剧本** 做端到端可视分析的软件：后端用 Python 解析剧本 PDF 并完成五项分析任务，前端用 React + ECharts 提供多模块交互界面。原型面向 ChinaVis 2026 赛题 1-I 京剧数据集。
+
+</div>
+
+<div align="center">
+  <img src="docs/screenshots/overview.jpg" alt="总览仪表盘" width="92%">
+  <br><sub>总览仪表盘：全库行当构成、剧目类型与时期分布、数据来源、五项任务进度</sub>
+</div>
+
+---
+
+## 这个项目是什么
+
+输入是 1473 部京剧剧本的 PDF；系统把它们解析成统一语料，再围绕「角色行当、人物关系、剧情主题、叙事结构、跨维度关联」做五项分析，并把每一项结果做成可交互的可视化界面。
+
+- **一份语料底座**：1473 部剧本全部解析，得到 7656 个标注角色实例、360,223 条对白，统一存为 `corpus.jsonl` + `plays.sqlite`，供全部任务复用。
+- **五项分析任务**：行当分类、关系网络、主题提取、叙事结构、跨维度关联，每项配一个前端模块。
+- **完整界面叙事**：从「开篇导览（文化背景）」到「五项数据分析」再到「结语（结论汇总）」，左侧导航在九个模块间切换。
+- **全局剧目联动**：在侧栏搜索任一剧目设为「当前剧目」，五个任务模块自动联动展示该剧的画像（单一数据源，本地持久化）。
+- **数据接地的 AI 助手**：内置工具调用智能体，基于系统已算出的真实指标作答，不脱离数据编造。
+
+---
+
+## 功能模块
+
+系统按「背景 → 分析 → 结论」组织为九个模块：
+
+| 模块 | 内容 |
+| --- | --- |
+| 开篇导览 | 京剧发展时间线、中国戏曲地图（剧种源流）、生旦净丑行当与扮相、脸谱色彩、唱念做打四功 |
+| 总览 | 全库行当构成、剧目类型分布、时期分布、数据来源、任务进度（含 `/api/overview`） |
+| 任务一 · 行当分类 | 角色行当分类与推断、置信度审计、混淆分析、细分行当、时期演化 |
+| 任务二 · 关系网络 | 同场共现 + 对话邻接建网，按剧目类型对比网络结构，单剧力导向关系图 |
+| 任务三 · 主题提取 | LDA 主题建模、主题共现、原型聚类、跨类型/时期比较、相似剧目推荐 |
+| 任务四 · 叙事结构 | 逐场戏剧强度曲线、关键阶段识别、典型叙事弧线聚类 |
+| 任务五 · 综合关联 | 关系 × 主题 × 叙事 × 行当四维相关、协同链路、综合原型 |
+| 双剧对比 | 任选两部剧目做四维横向对比 |
+| 结语余韵 | 汇总五维结论、方法边界说明、数据来源致谢 |
+
+---
+
+## 界面预览
+
+<table>
+<tr>
+<td width="50%"><img src="docs/screenshots/intro.jpg" alt="开篇导览"><br><sub><b>开篇导览</b> · 京剧源流时间线与中国戏曲地图</sub></td>
+<td width="50%"><img src="docs/screenshots/task1-roles.jpg" alt="任务一 行当分类"><br><sub><b>任务一</b> · 混淆矩阵、行当分布、置信度审计</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="docs/screenshots/task2-network.jpg" alt="任务二 关系网络"><br><sub><b>任务二</b> · 结构角色、类型差异显著性、时期演化</sub></td>
+<td width="50%"><img src="docs/screenshots/task3-topics.jpg" alt="任务三 主题提取"><br><sub><b>任务三</b> · 主题随时代变迁、单剧主题构成与相似剧目</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="docs/screenshots/task4-narrative.jpg" alt="任务四 叙事结构"><br><sub><b>任务四</b> · 节奏差异检验、弧线数选择、强度敏感性</sub></td>
+<td width="50%"><img src="docs/screenshots/task5-synthesis.jpg" alt="任务五 综合关联"><br><sub><b>任务五</b> · 跨维度相关、协同链路、综合原型</sub></td>
+</tr>
+</table>
+
+---
+
+## 主要分析结果
+
+每项任务都同时给出结论与方法边界，不夸大模型能力。
+
+- **任务一 · 行当分类**：用逻辑回归对角色实例分类（表演型/结构/画像特征 + 台词 TF-IDF），实例级 5 折 macro-F1 **0.704**，按剧目分组验证 **0.696**，官方四类（生/旦/净/丑）macro-F1 **0.753**；据此推断 15,034 个未标注出场角色，并按高/中/低置信度标记待核样本。混淆分析显示最大误判集中在「生↔净」，与两者同以念白为主、舞台气质相近一致——说明上限来自行当边界本身的模糊，而非模型缺陷。
+- **任务二 · 关系网络**：公案戏网络规模最大、中心势最高（围绕清官的星型结构）；历史戏模块度最高（敌我阵营分明）；家庭戏规模最小但密度最高。各类型行当同配系数均为负（全库 **−0.16**），说明社群对应「敌我阵营」而非「同行当抱团」。
+- **任务三 · 主题提取**：先剔除人名/道具等实体再做 LDA，数据驱动选出 **10 个动作母题**（征战、忠义复仇、婚姻家庭、断狱等）。征战类母题随时代下降、家庭伦理类母题上升（Kruskal–Wallis + BH-FDR 校正全部显著）。与 NMF、多 seed LDA 做匹配余弦对照，核心母题高度复现。
+- **任务四 · 叙事结构**：用唱念做打标记合成逐场戏剧强度曲线，KMeans 聚出 **5 种典型叙事弧线**。高潮多置于后半。历史戏做打量显著高于家庭戏与神怪戏，但与公案戏差异未达显著（两两 Mann–Whitney U 检验）。
+- **任务五 · 综合关联**：打通四维度计算相关与协同链路。补充偏相关控制剧目体量后，**行当协同为真**（模块度↔净占比、↔旦占比控制后仍稳健），而「模块度↔做打」实为体量假象（控制后衰减到近 0）。轻量预测验证：仅用非叙事维度交叉验证预测叙事弧型，macro-F1 是多数类基线的约 2.5 倍。
+
+---
+
+## 技术架构
 
 ```
-pipeline/   数据解析 + 任务一分析（Python，conda env: llm）
-backend/    FastAPI，读 data/processed/* 提供 JSON API
-frontend/   React + Vite + ECharts 仪表盘
-data/raw/   解压后的剧本 PDF（按集合归类）
-data/processed/  corpus.jsonl / plays.sqlite / *.parquet / task1_*.json
+pipeline/        数据解析 + 五项分析（Python）
+   └── extract → build_corpus → task1..task5 → verify_numbers
+data/processed/  产物：corpus.jsonl / plays.sqlite / *.parquet / task*_*.json
+backend/         FastAPI，读 data/processed/* 提供 JSON API（network_lib 前后端共用）
+frontend/        React + Vite + ECharts，src/modules/ 每个任务一个模块
+desktop/         Electron 外壳，把后端与前端打包成独立桌面应用
 ```
 
-## 复现步骤
+数据流是单向的：`pipeline` 离线算出全部结果存到 `data/processed/`，`backend` 只做读取与按需聚合，`frontend` 通过 API 取数并渲染。这样前端无需重算，启动即用。
 
-环境依赖固定在 [`requirements.txt`](requirements.txt)：
+**技术栈**：PyMuPDF（PDF 解析）、scikit-learn（逻辑回归 / LDA / KMeans / MDS）、networkx（关系网络）、jieba（中文分词）、scipy（统计检验）、FastAPI（后端）、React + Vite + ECharts（前端）、Electron（桌面打包）。
+
+### AI 分析助手
+
+右下角浮钮打开 AI 助手抽屉，可用自然语言追问系统结论。助手是一个工具调用智能体：后端把已算出的全库指标和当前选中剧目的四维画像拼成上下文，助手按需检索真实数据后作答，并在前端展示检索轨迹。接入 DeepSeek（OpenAI 兼容端点，模型 `deepseek-chat`），未配置 Key 时给出中文提示、不影响其余功能。
+
+<div align="center">
+  <img src="docs/screenshots/ai-architecture.jpg" alt="AI 助手架构" width="80%">
+</div>
+
+---
+
+## 快速开始
+
+### 1. 环境
 
 ```bash
 conda create -n llm python=3.11 && conda activate llm
 pip install -r requirements.txt
 ```
 
-整条流水线可一键复现（任一步失败即停）：
+仓库已自带 `data/processed/` 产物，可直接启动服务；如需从原始数据重算，见下方「复现数据流水线」。
+
+### 2. 启动（Linux / WSL / macOS）
 
 ```bash
-cd pipeline && ./run_all.sh        # 等价于下列各步顺序执行
+./run.sh        # 后端 :8000 + 前端 :5173
 ```
 
-或手动分步：
+浏览器打开 http://localhost:5173 。也可分别启动：
 
 ```bash
-conda activate llm
-cd pipeline
-python extract.py          # 解压 41 个嵌套 zip -> data/raw（中文名 GBK 修正）
-python build_corpus.py     # 解析全部 PDF -> corpus.jsonl + plays.sqlite + 质量报告
-python task1_features.py   # 角色实例特征表 instances.parquet
-python task1_classify.py   # 训练/交叉验证/推断 -> predictions/metrics/patterns
-python task1_subrole.py    # 细分行当分层分类(生/旦建模,净/丑仅展示) -> task1_subroles.json
-python task1_temporal.py   # 集合->时期映射，行当演化 -> task1_temporal.json
-python task2_network.py    # 角色关系网络指标 + 剧目类型统计 -> task2_*
-python task3_topics.py     # LDA 主题提取 + 组合模式 + 跨类型/时期比较 -> task3_*
-python task4_narrative.py  # 叙事强度曲线 + 关键阶段 + 典型弧线聚类 -> task4_*
-python task5_synthesis.py  # 三维跨维度相关 + 协同链路 + 综合原型 -> task5_*
-python verify_numbers.py   # 核查 README/答题卡引用数字与产物一致（提交前自检）
-```
-
-> 软件架构：`pipeline/`（解析+分析）→ `data/processed/`（产物）→ `backend/`（FastAPI，
-> `network_lib.py` 建网逻辑前后端共用）→ `frontend/`（多模块前端，`src/modules/` 每任务一个模块）。
-
-## 启动软件
-
-### Windows 用户怎么运行
-
-**只给别人演示/交作业**：推荐发桌面应用绿色版。先在 Windows 机器上按
-[`desktop/README.md`](desktop/README.md) 打包，得到
-`desktop\release\戏韵梨园谱系-1.0.1-x64-绿色版.exe` 后，对方双击即可运行；
-无需安装 Python / Node，也不需要重新跑 pipeline。AI 助手联网与 API Key 为可选项。
-
-**从源码在 Windows 上运行 Web 版**：
-
-1. 安装 Windows 版 Python 3.11+（安装时勾选 Add python.exe to PATH）和 Node.js 20+ / 22+。
-2. 保留或复制本仓库的 `data\processed\` 目录；如果缺失，先运行数据流水线生成。
-3. 在项目根目录双击 `run_windows.bat`，或在 PowerShell 中执行：
-
-```powershell
-.\run_windows.ps1
-```
-
-脚本会自动创建 `.venv`、安装 Python/前端依赖、启动后端 `:8000` 与前端 `:5173`。
-浏览器打开 http://localhost:5173 。首次运行如 Windows 防火墙询问网络访问，请允许。
-
-Windows 打包时会从 `desktop\embedded.env` 或 `backend\.env` 读取 DeepSeek/ZenMux 配置，
-写入 `desktop\resources\config\embedded.env` 并随 exe 打入包内。外部环境变量优先；
-未设置时，内嵌 Key 会作为 AI 助手兜底 Key。
-
-**桌面应用（推荐 · 独立软件形态）** — Electron 外壳，后端随应用自动起停，
-舞台暗场风界面。开发运行与 Windows 打包见 [`desktop/README.md`](desktop/README.md)：
-
-```bash
-cd desktop && npm install && npm run dev   # 起独立应用窗口（WSLg）
-```
-
-**Web 调试模式**（开发期快速预览）：
-
-```bash
-./run.sh          # Linux/WSL/macOS：后端 :8000 + 前端 :5173
-# Windows：双击 run_windows.bat，或执行 .\run_windows.ps1
-# 或分别：
-uvicorn backend.main:app --host 0.0.0.0 --port 8000        # 在项目根目录
+uvicorn backend.main:app --host 0.0.0.0 --port 8000   # 在项目根目录
 cd frontend && npm install && npm run dev
 ```
 
-本机浏览器打开 http://localhost:5173 ；局域网其他设备可打开 `http://<本机IP>:5173`。
-若 Windows 防火墙弹窗，请允许该应用在当前网络中通信。
+### 3. 启动（Windows）
 
-## AI 分析助手（DeepSeek · 数据接地对话）
-
-右下角「问」字浮钮打开 AI 助手抽屉，可用自然语言追问系统结论。助手**数据接地**：
-后端把已算出的全库指标 + 当前选中剧目的四维画像（行当/网络/主题/叙事/综合）拼成上下文，
-只依据真实数据作答、不编造（`backend/llm.py` + `POST /api/chat` 流式 SSE，前端打字机渲染）。
-助手感知「当前剧目」与「当前模块」，回答随之联动。
-
-需配置 DeepSeek Key（OpenAI 兼容端点，模型 `deepseek-chat`）：
-
-```bash
-export DEEPSEEK_API_KEY=sk-xxxx        # 或复制 backend/.env.example -> backend/.env 填入
-./run.sh                               # 桌面应用同样自动透传该环境变量
-```
-
-Windows PowerShell 可用：
+安装 Python 3.11+ 与 Node.js 20+，双击 `run_windows.bat`，或在 PowerShell 执行：
 
 ```powershell
-$env:DEEPSEEK_API_KEY="sk-xxxx"
 .\run_windows.ps1
 ```
 
-未配置 Key 时助手会给出友好中文提示，不影响其余功能。
+脚本会自动创建 `.venv`、安装依赖、启动后端与前端。
 
-## 任务一主要发现（用于答题卡）
+### 4. 配置 AI 助手（可选）
 
-- **表演型与行当强对应**：旦行唱占比最高，丑行近乎全为"白"，生/净以念白为主——量化印证唱念做打与行当的关系。
-- **台词典型用语区分行当**：净"孤家/哇呀呀"、旦"奴家/妾/女儿"、生"寡人/贤弟/孩儿"、丑口语化。
-- **模型可信度显式审计**：实例级 macro-F1 0.704，官方四类（生/旦/净/丑）macro-F1 0.753；
-  15,034 个推断角色中高/中/低置信分别为 5,670 / 4,129 / 5,235，低置信样本在界面中标为“待核”。
-- **误判结构分析（混淆矩阵，零重训）**：最大误判集中在**生↔净**（二者同以念白为主、舞台气质相近），
-  杂行样本稀少召回最低——误判结构与表演型重叠一致，说明 macro-F1 上限来自数据本身的行当边界模糊，
-  而非模型缺陷（界面给出混淆矩阵召回热力 + 最易混淆行当对）。
-- **时期演化**：净行占比随时期下降（清末民国 0.22 → 当代 0.16），丑行在当代上升（0.17→0.21），
-  群杂角色（龙套类）在当代显著增多。
-- **细分行当（分层推断）**：生行细分可高精度还原（老生/小生/武生/红生/娃娃生，5 折 macro-F1 **0.73**），
-  旦行细分次之（老旦/正旦/花旦/彩旦/武旦/贴旦，**0.56**）；净/丑标注稀疏（缺铜锤/架子等核心区分），
-  仅展示已标注细分、不作推断（诚实声明数据局限）。
+```bash
+export DEEPSEEK_API_KEY=sk-xxxx        # 或复制 backend/.env.example -> backend/.env 填入
+./run.sh
+```
 
-## 任务二主要发现（用于答题卡）
+---
 
-- **公案戏**网络规模最大（均 15.4 角色 / 68.6 关系）、中心势高（0.30）——围绕清官/判官的星型核心结构。
-- **历史戏**模块度最高（0.21）——敌我/朝野阵营分明，社群划分清晰。
-- **家庭戏**规模最小但密度最高（0.70）——人物少而互动紧密。
-- 全库散点显示"规模↑则中心势↑"的弱正相关，大戏更依赖核心人物组织剧情。
-- **结构角色（行当×中心位）**：生行连接最广、介数中心性最高、约 **51%** 剧目占据"桥接主座"
-  （剧情组织者），净行次之，杂行最外围——量化了"生行挑大梁"的舞台分工。
-- **"最高/最大"经类型间两两检验（Mann–Whitney U + BH-FDR）**：历史戏模块度显著高于家庭戏，
-  但与公案戏、神怪戏差异未达显著（即"模块度并列最高档"更准确）；公案戏规模显著大于其余类型。
-- **网络结构随时代演化**（Kruskal–Wallis 显著）：人物网络规模随时代显著增大
-  （均 10.8 → 15.4 → 18.3 角色），人物体系趋于庞大；模块度/中心势在建国初期达峰。
-- **社群≠行当阵营**：各剧目类型的行当同配系数（role assortativity）均为负（全库 **−0.16**）——
-  京剧人物网络按行当"互补异配"（生旦净丑交错搭戏），检测出的社群对应"敌我阵营"而非"同行当抱团"。
+## 复现数据流水线
 
-## 任务三主要发现（用于答题卡）
+从原始剧本重新生成全部产物（任一步失败即停）：
 
-- **实体净化后母题清晰可分**：先按"故事"归并多卷剧计文档频率、并以裸名黑名单剔除人名/道具
-  （三泰/国母/莲灯/仙果等专名不再污染主题），再 LDA 得 **10 个动作母题**——征战（攻打/出战/部将、
-  进京/镇守）、忠义复仇（自刎/报仇/匈奴）、婚姻家庭（夫妻/相府/思念、妻子/投江）、断狱（杀死/状元、
-  乳母/洞房）等。
-- **数据驱动选 K**：K=5…15 扫描 u_mass 一致性，在 **K=10** 取得最优后回落，按"一致性退化前最细划分"取 K=10
-  （不再硬选 12）；主题分布图（JS 距离+MDS）显示母题语义聚簇。
-- **典型主题组合**：KMeans 得 6 个原型组合，最大原型（约 500 部）以"征战+复仇"动作母题为主干。
-- **跨类型/时期差异**：历史戏偏征战/忠义，家庭戏偏婚姻伦理，公案戏偏断狱计谋；可在"按时期"视图观察母题变迁。
-- **母题随时代迁移**（每剧主题权重做 Kruskal–Wallis 组间检验 + BH-FDR 校正，10 母题占比变化全部显著）：
-  征战类母题随时代**下降**（攻打/出战 −6.3pt、进京/镇守 −4.2pt），家庭伦理类母题**上升**
-  （妻子/投江/夫妻 +7.3pt、母女/父子 +7.6pt）——京剧题材呈现由"武戏征战"向"家庭伦理"的迁移。
-- **主题稳健性对照（NMF + 多 seed LDA）**：以主题-词分布最优匹配余弦衡量复现度——与完全不同的
-  NMF 方法平均一致 0.46、多 seed LDA 平均一致 0.54；复仇/家庭杀戮/救援等核心母题高度复现（余弦 0.6–0.9），
-  印证"10 母题非单次随机产物"，部分征战母题的细分边界存在方法依赖性（诚实声明）。
+```bash
+conda activate llm
+cd pipeline && ./run_all.sh
+```
 
-## 任务四主要发现（用于答题卡）
+等价于按顺序执行：
 
-- **5 种典型叙事弧线（名称互异）**：平稳铺陈式(288)、结尾陡升式(202，高潮压在最末)、
-  后段高潮式(渐强)(181，峰位约 0.8)、前段先声夺人式(151)、中段经典弧线(143)。各原型可叠加簇内 p25–p75 离散度带。
-- **高潮多置于后半**：全库高潮位置直方右偏，平均渐强指数 +0.10~0.15，符合"层层铺垫、后段收束"的戏曲惯例。
-- **文武分野**：历史戏做打最多(均 5.0)、节奏外放；家庭戏/公案戏更依赖唱念抒情，高潮多为"文戏"。
-- **类型间节奏差异经两两检验**：历史戏做打量显著高于家庭戏与神怪戏，但与公案戏差异未达显著
-  （Mann–Whitney U + BH-FDR）——"历史戏做打最多"成立但需限定比较对象。
+```bash
+python extract.py          # 解压嵌套 zip -> data/raw（修正中文文件名编码）
+python build_corpus.py     # 解析全部 PDF -> corpus.jsonl + plays.sqlite + 质量报告
+python task1_features.py   # 角色实例特征表 instances.parquet
+python task1_classify.py   # 训练 / 交叉验证 / 推断 -> 预测、指标、模式
+python task1_subrole.py    # 细分行当分层分类 -> task1_subroles.json
+python task1_temporal.py   # 集合到时期映射，行当演化 -> task1_temporal.json
+python task2_network.py    # 关系网络指标 + 剧目类型统计 -> task2_*
+python task3_topics.py     # LDA 主题提取 + 组合模式 + 跨类型/时期比较 -> task3_*
+python task4_narrative.py  # 叙事强度曲线 + 关键阶段 + 弧线聚类 -> task4_*
+python task5_synthesis.py  # 四维相关 + 协同链路 + 综合原型 -> task5_*
+python verify_numbers.py   # 核查界面引用数字与产物一致（提交前自检）
+```
 
-## 任务五主要发现（用于答题卡）
+---
 
-- **三维显著协同**：网络规模↔做打量 r=+0.58、模块度↔做打量 +0.45、模块度↔净占比 +0.35、
-  模块度↔旦占比 −0.32——大而分阵营的网络多承载征战题材、武打高潮、由净行主导。
-- **偏相关控混淆（诚实甄别真假协同）**：对头条相关补"控制剧目体量（网络规模/场次）后的偏相关"，
-  96 项跨维检验中 37 项显著、**控体量后 26 项仍稳健**。**行当协同为真**：模块度↔净占比 +0.35→**+0.21**、
-  ↔旦占比 −0.32→**−0.22** 控后仍稳健；网络规模↔做打 +0.58→**+0.12** 仍稳健。
-  而 **"模块度/密度↔做打"实为体量假象**：控体量后衰减到近 0（+0.45→**+0.02**、−0.51→**−0.06**）——
-  其相关由"大戏既人多分阵营、又做打多"的共同体量驱动，并非模块化结构本身偏好武打。
-- **轻量预测验证（协同→可预测）**：仅用非叙事维度（网络结构+行当占比+主题分布）交叉验证预测叙事弧型，
-  macro-F1=0.226，约为多数类基线（0.092）的 **2.5 倍**——四维确有可预测的耦合；但绝对精度不高，
-  说明叙事结构仍保有大量自身变异，与"部分协同为体量假象"的偏相关结论相互印证。
-- **稳定协同链路**（Sankey）：历史戏→征战主题→结尾渐强高潮；家庭戏→婚姻家庭主题→前段/平稳叙事。
-- **6 类综合原型**：如「大网络+征战+武打渐强」「小网络+婚姻+文戏」等稳定结构，印证人物关系、
-  主题与叙事方式存在典型关联模式与协同规律。
+## 桌面应用
 
-## 完成度
+Electron 外壳把后端与前端打包成独立桌面应用，后端随应用自动起停，无需安装 Python / Node。开发运行与打包见 [`desktop/README.md`](desktop/README.md)：
 
-赛题 1-I 五个任务全部完成。软件以完整叙事弧组织为九个模块：
-**开篇导览 + 总览 + 任务一~五 + 双剧对比 + 结语余韵**——从文化语境，到数据分析，再到回味升华。
+```bash
+cd desktop && npm install && npm run dev   # 起独立应用窗口
+```
+
+---
+
+## 目录结构
+
+```
+pipeline/        数据解析与五项分析脚本
+backend/         FastAPI 服务（main.py / llm.py / agent.py / network_lib.py）
+frontend/        React + Vite 前端（src/modules/ 每任务一模块）
+desktop/         Electron 桌面封装
+data/processed/  分析产物（语料、数据库、各任务 JSON）
+docs/            截图与图表生成脚本（make_figures.py / make_diagrams.py）
+requirements.txt Python 依赖（版本固定）
+run.sh           Linux/WSL/macOS 一键启动
+run_windows.*    Windows 启动脚本
+```
+
+> 原始数据集 `1-I_opera_dataset.zip` 与 `data/raw/` 体积较大，未纳入仓库；仓库自带的 `data/processed/` 已足以启动系统。
+
+---
+
+## 许可证
+
+本项目以 [MIT 许可证](LICENSE) 开源。

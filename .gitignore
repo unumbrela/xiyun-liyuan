@@ -37,6 +37,24 @@ desktop/release/
 1-I_opera_dataset.zip
 data/raw/
 
+# Course-submission deliverables — kept locally, excluded from the public repo
+课程考核要求.md
+docs/figures/
+docs/*.pdf
+docs/*.docx
+docs/答题卡.*
+docs/answersheet.*
+docs/build_report.py
+docs/演示视频*.md
+AI助手架构图.png
+1191230428*
+
+# Demo recording / voiceover (large media, kept locally)
+*.mp4
+*.mp3
+*.srt
+!frontend/public/sounds/*.mp3
+
 # Runtime artifacts
 *.sqlite-shm
 *.sqlite-wal
